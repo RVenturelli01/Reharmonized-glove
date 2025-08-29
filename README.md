@@ -1,7 +1,10 @@
 # 🎶 Reharmonized Glove  
 *A sensor-equipped glove that transforms hand movements into music for engaging fine motor skills therapy.*  
 
-[![🎥 Watch the demo on YouTube](https://img.youtube.com/vi/HFlzflYO1M4/0.jpg)](https://www.youtube.com/watch?v=HFlzflYO1M4)
+
+## 🎥 Watch the demo on YouTube  
+
+[![Watch the demo on YouTube](https://img.youtube.com/vi/HFlzflYO1M4/0.jpg)](https://www.youtube.com/watch?v=HFlzflYO1M4)
 
 ---
 
