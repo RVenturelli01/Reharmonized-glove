@@ -36,16 +36,29 @@ The goal is to create a tool that makes **motor coordination therapy** not only 
 
 ### 1. Hardware requirements  
 - Arduino Nano RP2040 Connect (or compatible board)  
-- Flex sensors (one per finger)  
+- Flex sensors (one per finger)
+- Resistors (one per flex sensor) 
 - Glove (fabric base)  
 - Jumper wires & protoboard  
-- (Optional) Accelerometer MPU6050 if not using RP2040’s onboard IMU  
-- LiPo battery + step-up regulator (5V)  
-
+- Accelerometer MPU6050 (RP2040’s onboard IMU)  
+- LiPo battery + step-up regulator (5V)
+- 
 ### 2. Software setup  
-- Arduino IDE (with necessary libraries)  
-- Python scripts (for MIDI/OSC communication)  
-- Any DAW or synthesizer to receive sound  
+To make the glove work you need both the Arduino code and the Python receiver running on your PC:  
+
+1. **Arduino side**  
+   - Upload the sketch `midi_sender.ino` to the Arduino Nano RP2040.  
+   - This code reads the **flex sensors** and the **hand orientation** (via IMU/accelerometer).  
+   - The processed data is sent as **MIDI messages over Wi-Fi** to your computer.  
+   - ⚠️ In the Arduino code you must set:  
+     - Your **Wi-Fi SSID** and **password** (same network for Arduino and PC).  
+     - The **IP address of your PC**, so Arduino knows where to send the data.  
+
+2. **PC side**  
+   - Run the Python script `MIDI_receiver.py`.  
+   - This script listens for the MIDI messages sent by Arduino and works as a **virtual synthesizer**.  
+   - The received signals are converted into sounds, which are played through your computer (or a connected DAW / speakers).  
+
 
 ---
 
