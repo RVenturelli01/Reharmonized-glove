@@ -4,9 +4,9 @@
 #include <WiFiNINA.h>
 
 // WiFi settings:
-char ssid[] = "AndroidAP3BCD";           // il nome della tua rete WiFi
-char pass[] = "jqvy3017";                // la password della tua rete WiFi
-char server[] = "192.168.45.2";         // indirizzo IP del portatile
+char ssid[] = "realme 8 Pro";           // il nome della tua rete WiFi
+char pass[] = "myhotspot";                // la password della tua rete WiFi
+char server[] = "192.168.33.2";         // indirizzo IP del portatile
 
 // WiFi settings:
 // char ssid[] = "iliadbox-60F315";  // il nome della tua rete WiFi
