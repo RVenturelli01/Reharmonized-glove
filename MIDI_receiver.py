@@ -82,6 +82,9 @@ def main():
     # set piano on the channel 1
     program_change = [0xC0 + 1, 0]
     midiout.send_message(program_change)
+    # set tubular bells on channel 15 (instrument change feedback)
+    program_change = [0xC0 + 15, 14]
+    midiout.send_message(program_change)
 
     thread1 = threading.Thread(target=server_thread, args=(server_ip, port1, buffer_size, midiout))
     thread2 = threading.Thread(target=server_thread, args=(server_ip, port2, buffer_size, midiout))

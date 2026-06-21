@@ -59,7 +59,7 @@ int notes[n_instruments][6] = { { 46, 39, 36, 45, 47, 50 },
                                 { 76, 75, 71, 74, 72, 69 } };
 
 // change instrument
-float threshold_change_on = 0;
+float threshold_change_on = 0.1;
 float threshold_change_off = 0.3;
 bool flag_change = false;
 
@@ -238,6 +238,8 @@ void loop() {
     // change the instrument
     //Serial.println("cambio strumento");
     channel_index = (channel_index + 1) % n_instruments;
+    String confirmNote = numbers2midi(0x9F, 60, 100);  // canale 15 dedicato ai feedback
+    sendData(confirmNote, 0);
     flag_change = true;
   } else if ((R_flex_norms_filtered[0] > threshold_change_off || R_flex_norms_filtered[1] > threshold_change_off || R_flex_norms_filtered[2] > threshold_change_off) && flag_change == true) {
     flag_change = false;
