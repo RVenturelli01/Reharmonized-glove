@@ -4,17 +4,12 @@
 #include <WiFiNINA.h>
 
 // WiFi settings:
-char ssid[] = "realme 8 Pro";           // il nome della tua rete WiFi
-char pass[] = "myhotspot";                // la password della tua rete WiFi
-char server[] = "192.168.33.2";         // indirizzo IP del portatile
-
-// WiFi settings:
-// char ssid[] = "iliadbox-60F315";  // il nome della tua rete WiFi
-// char pass[] = "napolicuore";      // la password della tua rete WiFi
-// char server[] = "192.168.1.71";   // indirizzo IP del portatile
+char ssid[] = "...";           // name of your WiFi network
+char pass[] = "...";           // password of your WiFi network
+char server[] = "...";         // IP address of the laptop
 
 const int n_clients = 4;
-int ports[n_clients] = { 12345, 12346, 12347, 12348 };  // porta su cui il server ascolta
+int ports[n_clients] = { 12345, 12346, 12347, 12348 };  // port on which the server listens
 WiFiClient clients[n_clients];
 
 // flex sensor settings
